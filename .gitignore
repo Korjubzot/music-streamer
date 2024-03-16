@@ -27,4 +27,6 @@ yarn-error.log
 *.sublime-workspace
 *.komodoproject
 *.komodotools
-*.kate-swp
+
+# Server Node Modules
+server/node_modules

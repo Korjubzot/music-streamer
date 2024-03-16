@@ -1,6 +1,20 @@
 const express = require("express");
+const pg = require("pg");
+const { Pool } = require("pg");
+require("dotenv").config();
 const app = express();
 
+app.use(express.json());
+
+const pool = new pg.Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "postgres",
+  password: "password",
+  port: 5432,
+});
+
+// TODO link to the database
 app.get("/api", (req, res) => {
   res.json({
     users: [
@@ -17,6 +31,15 @@ app.get("/api", (req, res) => {
       "user11",
     ],
   });
+});
+
+app.get("/albums", async (req, res) => {
+  try {
+    const { rows } = await pool.query("SELECT * FROM albums");
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 app.listen(5001, () => {
