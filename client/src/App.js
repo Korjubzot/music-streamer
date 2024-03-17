@@ -1,23 +1,25 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
+import axios from "axios";
+
+import Player from "./components/player/player";
+import Uploader from "./components/uploader/uploader";
+
 function App() {
-  const [backendData, setBackendData] = useState(null);
+  // TODO move data getter into a seperate component
   const [albumsData, setAlbumsData] = useState(null);
   const [error, setError] = useState(null);
 
-  // useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setBackendData(data))
-  //     .catch((error) => setError(error));
-  // }, []);
-
   useEffect(() => {
-    fetch("http://localhost:5001/albums")
-      .then((res) => res.json())
-      .then((data) => setAlbumsData(data))
-      .catch((error) => setError(error));
+    axios
+      .get("http://localhost:5001/albums")
+      .then((res) => {
+        setAlbumsData(res.data);
+      })
+      .catch((error) => {
+        setError(error);
+      });
   }, []);
 
   if (error) {
@@ -27,14 +29,19 @@ function App() {
   } else {
     return (
       <div>
-        {albumsData &&
-          albumsData.map((album, index) => {
-            return (
-              <div key={index}>
-                {album.name} by {album.artist}, released in {album.release_year}
-              </div>
-            );
-          })}
+        <div>
+          {albumsData &&
+            albumsData.map((album, index) => {
+              return (
+                <div key={index}>
+                  {album.name} by {album.artist}, released in{" "}
+                  {album.release_year}
+                </div>
+              );
+            })}
+        </div>
+        <Player />
+        <Uploader />
       </div>
     );
   }
