@@ -15,7 +15,7 @@ function Uploader() {
     // formData.append("file", selectedFile);
 
     // axios
-    //   .post("/upload", formData)
+    //   .post("http://localhost:5001/upload", formData)
     //   .then((res) => {
     //     console.log(res);
     //   })
