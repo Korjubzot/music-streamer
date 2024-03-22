@@ -33,10 +33,10 @@ function App() {
           {albumsData &&
             albumsData.map((album, index) => {
               return (
-                <div key={index}>
-                  {album.name} by {album.artist}, released in{" "}
+                <h1 key={index} className="text-green-600">
+                  {album.title} by {album.artist}, released in{" "}
                   {album.release_year}
-                </div>
+                </h1>
               );
             })}
         </div>

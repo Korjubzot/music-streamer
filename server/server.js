@@ -45,6 +45,22 @@ app.get("/albums", async (req, res) => {
   }
 });
 
+app.post(
+  ("/albums",
+  async (req, res) => {
+    const { title, artist, release_year, genre } = req.body;
+    try {
+      const { rows } = await pool.query(
+        "INSERT INTO albums (title, artist, release_year, genre) VALUES ($1, $2, $3, $4) RETURNING *",
+        [title, artist, release_year, genre]
+      );
+      res.json(rows[0]);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  })
+);
+
 app.listen(5001, () => {
   console.log("Server is running on port 5001");
 });

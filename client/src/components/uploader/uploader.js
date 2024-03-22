@@ -25,17 +25,23 @@ function Uploader() {
     // TODO build this on the database end.
   }
   return (
-    <form onSubmit={handleFormSubmit}>
-      <input type="file" accept=".mp3" multiple onChange={handleFileChange} />
-      <input type="text" placeholder="Album name" />
-      <input type="text" placeholder="Artist" />
-      <input type="text" placeholder="Release year" />
-      <input type="text" placeholder="Genre" />
-      <input type="text" placeholder="Album art" />
-      <button type="submit" onClick={handleFormSubmit}>
-        Upload
-      </button>
-    </form>
+    <div class="w-full max-w-xs text-green-600">
+      <form className="bg-white shadow-md" onSubmit={handleFormSubmit}>
+        <input type="file" accept=".mp3" multiple onChange={handleFileChange} />
+        <input type="text" placeholder="Album name" />
+        <input type="text" placeholder="Artist" />
+        <input type="text" placeholder="Release year" />
+        <input type="text" placeholder="Genre" />
+        <input
+          type="file"
+          accept="image/jpeg, image/png, image/jpg"
+          placeholder="Album art"
+        />
+        <button type="submit" onClick={handleFormSubmit}>
+          Upload
+        </button>
+      </form>
+    </div>
     // TODO build a form that will send matching data with the file to the database
   );
 }
