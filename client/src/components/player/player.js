@@ -18,9 +18,21 @@ function Player() {
   }
   return (
     <div>
-      <button onClick={trackBackwardHandler}>Backward</button>
-      <button onClick={playPauseHandler}>{isPlaying ? "Pause" : "Play"}</button>
-      <button onClick={trackForwardHandler}>Forward</button>
+      <button
+        className="bg-blue-500 m-2 p-1 rounded"
+        onClick={trackBackwardHandler}
+      >
+        Backward
+      </button>
+      <button className="bg-red-500 m-2 p-1 rounded" onClick={playPauseHandler}>
+        {isPlaying ? "Pause" : "Play"}
+      </button>
+      <button
+        className="bg-blue-500 m-2 p-1 rounded"
+        onClick={trackForwardHandler}
+      >
+        Forward
+      </button>
     </div>
   );
 }

@@ -25,9 +25,15 @@ function Uploader() {
     // TODO build this on the database end.
   }
   return (
-    <div class="w-full max-w-xs text-green-600">
+    <div className="w-full max-w-xs text-green-600 flex flex-col items-center justify-center">
       <form className="bg-white shadow-md" onSubmit={handleFormSubmit}>
-        <input type="file" accept=".mp3" multiple onChange={handleFileChange} />
+        <input
+          type="file"
+          accept=".mp3"
+          multiple
+          onChange={handleFileChange}
+          placeholder="Upload an mp3"
+        />
         <input type="text" placeholder="Album name" />
         <input type="text" placeholder="Artist" />
         <input type="text" placeholder="Release year" />
@@ -37,12 +43,10 @@ function Uploader() {
           accept="image/jpeg, image/png, image/jpg"
           placeholder="Album art"
         />
-        <button type="submit" onClick={handleFormSubmit}>
-          Upload
-        </button>
+        <button type="submit">Upload</button>
       </form>
     </div>
-    // TODO build a form that will send matching data with the file to the database
+    // TODO style this form
   );
 }
 
