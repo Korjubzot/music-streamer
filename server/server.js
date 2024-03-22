@@ -18,6 +18,11 @@ const pool = new pg.Pool({
 });
 
 // TODO link to the database
+
+app.get("/ping", async (req, res) => {
+  res.status(200).json({ message: "Hello World" });
+});
+
 app.get("/api", (req, res) => {
   res.json({
     users: [
