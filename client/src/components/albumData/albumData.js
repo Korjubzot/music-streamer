@@ -5,7 +5,6 @@ import img from "../../temp/img/plasticBeach.jpg";
 import axios from "axios";
 
 function AlbumData() {
-  // TODO move data getter into a seperate component
   const [albumsData, setAlbumsData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -26,7 +25,7 @@ function AlbumData() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div>
+      <div className="flex flex-col justify-center items-center">
         <div>
           {albumsData &&
             albumsData.map((album, index) => {
@@ -38,11 +37,7 @@ function AlbumData() {
               );
             })}
         </div>
-        <img
-          className="max-w-lg max-h-lg flex flex-col justify-center items-center"
-          src={img}
-          alt="album art"
-        />
+        <img className="max-w-lg max-h-lg" src={img} alt="album art" />
       </div>
     );
   }

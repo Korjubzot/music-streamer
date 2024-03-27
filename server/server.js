@@ -17,7 +17,7 @@ const pool = new pg.Pool({
   port: 5432,
 });
 
-// TODO link to the database
+// TODO MOVE TO .ENV
 
 app.get("/ping", async (req, res) => {
   res.status(200).json({ message: "Hello World" });
