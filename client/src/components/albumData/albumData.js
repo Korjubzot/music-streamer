@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Player from "../player/player";
 
 import img from "../../temp/img/plasticBeach.jpg";
-
 import axios from "axios";
 
 function AlbumData() {
@@ -20,19 +20,23 @@ function AlbumData() {
   }, []);
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div className="text-red-500 font-bold text-xl">
+        Error: {error.message}
+      </div>
+    );
   } else if (!albumsData) {
-    return <div>Loading...</div>;
+    return <div className="text-blue-500 font-bold text-xl">Loading...</div>;
   } else {
     return (
-      <div className="flex flex-col justify-center items-center bg-gray-100 min-h-screen">
+      <div className="flex flex-col justify-center items-center bg-gray-100 max-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {albumsData &&
             albumsData.map((album, index) => {
               return (
                 <div
                   key={index}
-                  className="my-8 bg-white p-6 rounded-lg shadow-md"
+                  className="my-2 bg-white p-6 rounded-lg shadow-md"
                 >
                   <h1 className="text-green-600 text-4xl mb-2">
                     {album.title}
@@ -47,7 +51,12 @@ function AlbumData() {
               );
             })}
         </div>
-        <img className="max-w-lg max-h-lg mt-8" src={img} alt="album art" />
+        <Player />
+        <img
+          className="max-w-lg max-h-lg mt-4 rounded-lg shadow-md"
+          src={img}
+          alt="album art"
+        />
       </div>
     );
   }

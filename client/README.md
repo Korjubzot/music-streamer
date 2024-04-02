@@ -1,3 +1,7 @@
+# NOTES
+
+Axios has a breaking issue that causes the latest version to fail to compile. Currently, the solution is to downgrade to 0.27.2
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

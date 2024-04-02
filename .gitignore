@@ -20,6 +20,10 @@ yarn-error.log
 .env.test.local
 .env.production.local
 
+# Babel
+
+.babelrc
+
 # Editor and IDE files
 .vscode/
 .idea/

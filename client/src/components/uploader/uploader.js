@@ -10,43 +10,56 @@ function Uploader() {
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log(selectedFile);
-
-    // const formData = new FormData();
-    // formData.append("file", selectedFile);
-
-    // axios
-    //   .post("http://localhost:5001/upload", formData)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-    // TODO build this on the database end.
   }
+
   return (
     <div className="w-full max-w-xs text-green-600 flex flex-col items-center justify-center">
-      <form className="bg-white shadow-md" onSubmit={handleFormSubmit}>
+      <form
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        onSubmit={handleFormSubmit}
+      >
         <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="file"
           accept=".mp3"
           multiple
           onChange={handleFileChange}
           placeholder="Upload an mp3"
         />
-        <input type="text" placeholder="Album name" />
-        <input type="text" placeholder="Artist" />
-        <input type="text" placeholder="Release year" />
-        <input type="text" placeholder="Genre" />
         <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
+          type="text"
+          placeholder="Album name"
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
+          type="text"
+          placeholder="Artist"
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
+          type="text"
+          placeholder="Release year"
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
+          type="text"
+          placeholder="Genre"
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
           type="file"
           accept="image/jpeg, image/png, image/jpg"
           placeholder="Album art"
         />
-        <button type="submit">Upload</button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
+          type="submit"
+        >
+          Upload
+        </button>
       </form>
     </div>
-    // TODO style this form
   );
 }
 

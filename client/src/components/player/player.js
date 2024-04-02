@@ -16,19 +16,27 @@ function Player() {
     console.log(isPlaying ? "Pause" : "Play");
     setIsPlaying(!isPlaying);
   }
+
   return (
-    <div>
+    <div className="flex justify-center items-center space-x-4 bg-gray-100 p-4 rounded-lg">
       <button
-        className="bg-blue-500 m-2 p-1 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         onClick={trackBackwardHandler}
       >
         Backward
       </button>
-      <button className="bg-red-500 m-2 p-1 rounded" onClick={playPauseHandler}>
+      <button
+        className={`font-bold py-2 px-4 rounded ${
+          isPlaying
+            ? "bg-red-500 hover:bg-red-700"
+            : "bg-green-500 hover:bg-green-700"
+        }`}
+        onClick={playPauseHandler}
+      >
         {isPlaying ? "Pause" : "Play"}
       </button>
       <button
-        className="bg-blue-500 m-2 p-1 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         onClick={trackForwardHandler}
       >
         Forward
