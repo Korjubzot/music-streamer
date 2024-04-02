@@ -1,74 +1,53 @@
-# NOTES
+# Music Streaming App
 
-Axios has a breaking issue that causes the latest version to fail to compile. Currently, the solution is to downgrade to 0.27.2
+This is a dedicated music streaming service for users to upload, manage and play back their own music files. 
 
-# Getting Started with Create React App
+## Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Play back uploaded music tracks from anywhere
+- Fully self hosted i.e. not tied to any major streaming service
+- Clean UI
 
-## Available Scripts
+### Description
 
-In the project directory, you can run:
+I've built this as a full-stack project both for my portfolio, but also as an attempt to disengage from streaming services like Spotify and Apple Music. The ongoing turmoil in the music industry, the terrible royalties musicians receive, and the general failing of the Spotify algorithym to provide me with music I enjoy has left me disillusioned with streaming, and I'm rebuilding a personal library. Being able to stream that library would be very handy!
 
-### `npm start`
+### Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone the GitHub repo with 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone https://github.com/Korjubzot/music-streamer
+```
 
-### `npm test`
+Enter client directory.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+cd express-music-streamer/client
+```
 
-### `npm run build`
+Run npm start.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will create a React client at localhost:3000 for testing purposes. A matching backend (under the ```server``` directory) as well as a Docker container for the database will need to be spun up as well.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A more specific rundown on how to use this project for your own purposes will come when the project is better developed.
 
-### `npm run eject`
+### Technology
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project was built with React.js and TailwindCSS for the frontend. Handling requests to the database is done using Axios. The backend is built with Node.js and Express.js, as well as a Docker container running a postgreSQL database.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Todo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [ ] Hit basic feature complete status - playback of music, upload of tracks
+- [ ] Dark mode
+- [ ] Significant work to be done on backend handling
+- [ ] Polish language option
+- [ ] Polish README
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Licence
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
