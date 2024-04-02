@@ -29,7 +29,10 @@ function AlbumData() {
     return <div className="text-blue-500 font-bold text-xl">Loading...</div>;
   } else {
     return (
-      <div className="flex flex-col justify-center items-center bg-gray-100 max-h-screen">
+      <div
+        data-testid="album-data"
+        className="flex flex-col justify-center items-center bg-gray-100 max-h-screen"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {albumsData &&
             albumsData.map((album, index) => {

@@ -14,6 +14,7 @@ function App() {
           <Route path="/" exact element={<AlbumData />} />
           <Route path="/upload" element={<Uploader />} />
         </Routes>
+        <p>Filler text</p>
       </div>
     </Router>
   );

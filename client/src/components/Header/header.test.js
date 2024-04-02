@@ -14,4 +14,26 @@ describe("Header", () => {
     const headerElement = screen.getByTestId("header");
     expect(headerElement).toBeInTheDocument();
   });
+
+  test("renders Home link", () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+
+    const homeLinkElement = screen.getByText(/Home/i);
+    expect(homeLinkElement).toBeInTheDocument();
+  });
+
+  test("renders Upload link", () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+
+    const uploadLinkElement = screen.getByText(/Upload/i);
+    expect(uploadLinkElement).toBeInTheDocument();
+  });
 });
