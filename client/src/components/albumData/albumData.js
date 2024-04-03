@@ -11,8 +11,10 @@ function AlbumData() {
   useEffect(() => {
     axios
       .get("http://localhost:5001/albums")
-      .then((res) => {
-        setAlbumsData(res.data);
+      .then((response) => {
+        if (response.data.length > 0) {
+          setAlbumsData(response.data[0]);
+        }
       })
       .catch((error) => {
         setError(error);
@@ -32,25 +34,17 @@ function AlbumData() {
       <div className="flex justify-center items-center bg-gray-100 max-h-screen">
         <div className="flex flex-col mr-4">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {albumsData &&
-              albumsData.map((album, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="my-2 bg-white p-6 rounded-lg shadow-md"
-                  >
-                    <h1 className="text-green-600 text-4xl mb-2">
-                      {album.title}
-                    </h1>
-                    <h2 className="text-gray-700 text-2xl mb-2">
-                      by {album.artist}
-                    </h2>
-                    <p className="text-gray-500">
-                      Released in {album.release_year}
-                    </p>
-                  </div>
-                );
-              })}
+            <div className="my-2 bg-white p-6 rounded-lg shadow-md">
+              <h1 className="text-green-600 text-4xl mb-2">
+                {albumsData.title}
+              </h1>
+              <h2 className="text-gray-700 text-2xl mb-2">
+                by {albumsData.artist}
+              </h2>
+              <p className="text-gray-500">
+                Released in {albumsData.release_year}
+              </p>
+            </div>
           </div>
           <Player />
         </div>
