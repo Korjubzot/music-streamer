@@ -32,5 +32,6 @@ yarn-error.log
 *.komodoproject
 *.komodotools
 
-# Server Node Modules
+# Server and Client Node Modules
 server/node_modules
+client/node_modules
