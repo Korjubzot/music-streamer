@@ -14,7 +14,28 @@ function App() {
           <Route path="/" exact element={<AlbumData />} />
           <Route path="/upload" element={<Uploader />} />
         </Routes>
-        <p>Filler text</p>
+        <p>
+          Will Walker, 2024. Check out my{" "}
+          <a
+            href="https://github.com/Korjubzot/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            GitHub
+          </a>{" "}
+          and my{" "}
+          <a
+            href="https://portfolio-billy-walker.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            {" "}
+            portfolio
+          </a>
+          !
+        </p>
       </div>
     </Router>
   );

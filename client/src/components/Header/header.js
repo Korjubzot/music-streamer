@@ -8,7 +8,7 @@ function Header() {
       className="bg-blue-500 text-white p-4 shadow-md"
     >
       <nav className="container mx-auto flex justify-between items-center">
-        <h1 className="font-bold text-xl">Music Library</h1>
+        <h1 className="font-bold text-xl">Music Library&nbsp;</h1>
         <ul className="flex space-x-4">
           <li>
             <Link to="/" className="hover:text-gray-300">
