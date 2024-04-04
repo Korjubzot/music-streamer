@@ -63,9 +63,10 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
-    const { rowCount } = await pool.query("DELETE FROM albums WHERE id = $1", [
-      id,
-    ]);
+    const { rowCount } = await pool.query(
+      "DELETE FROM albums WHERE album_id = $1",
+      [id]
+    );
     if (rowCount > 0) {
       res.json({ message: "Album deleted" });
     } else {

@@ -20,6 +20,11 @@ function Header() {
               Upload
             </Link>
           </li>
+          <li>
+            <Link to="/library" className="hover:text-gray-300">
+              Library
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
