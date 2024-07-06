@@ -35,3 +35,7 @@ yarn-error.log
 # Server and Client Node Modules
 server/node_modules
 client/node_modules
+
+# My Notes
+
+.notes.txt

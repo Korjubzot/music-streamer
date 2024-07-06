@@ -19,6 +19,13 @@ function LibraryData() {
       });
   }, []);
 
+  function deleteAlbum(title, id) {
+    axios.delete(`http://localhost:5001/albums/${id}`).then((response) => {
+      console.log(`Deleting album: ${title} with id: ${id}`);
+      window.location.reload(false);
+    });
+  }
+
   return (
     <div className="flex flex-col bg-gray-200">
       <table className="table-auto bg-white rounded-lg shadow-md overflow-hidden">
@@ -38,6 +45,14 @@ function LibraryData() {
                 <td className="border px-4 py-2">{album.title}</td>
                 <td className="border px-4 py-2">{album.genre}</td>
                 <td className="border px-4 py-2">{album.release_year}</td>
+                <td className="border px-4 py-2">
+                  <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => deleteAlbum(album.title, album.album_id)}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))
           ) : (
