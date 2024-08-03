@@ -20,7 +20,7 @@ function Player() {
   return (
     <div
       data-testid="player"
-      className="flex justify-center items-center space-x-4 bg-gray-100 p-4 rounded-lg"
+      className=" space-x-4 h-screen bg-gray-100 p-4 rounded-lg"
     >
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"

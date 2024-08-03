@@ -10,7 +10,7 @@ This is a dedicated music streaming service for users to upload, manage and play
 
 ### Description
 
-I've built this as a full-stack project both for my portfolio, but also as an attempt to disengage from streaming services like Spotify and Apple Music. The ongoing turmoil in the music industry, the terrible royalties musicians receive, and the general failing of the Spotify algorithym to provide me with music I enjoy has left me disillusioned with streaming, and I'm rebuilding a personal library. Being able to stream that library would be very handy!
+I've built this as a full-stack project both for my portfolio, but also as an attempt to disengage from streaming services like Spotify and Apple Music. The ongoing turmoil in the music industry, the terrible royalties musicians receive, and the general failing of the Spotify algorithm to provide me with music I enjoy has left me disillusioned with streaming, and I'm rebuilding a personal library. Being able to stream that library would be very handy! Of course, there are easier ways of doing this - a UPnP server might work - but that's not quite as fun.
 
 ### Installation
 
@@ -37,8 +37,10 @@ This project was built with React.js and TailwindCSS for the frontend. Handling 
 - [ ] Hit basic feature complete status - playback of music, upload of tracks
 - [ ] Dark mode
 - [ ] Significant work to be done on backend handling
+- [ ] Equally significant work to be done on tidying up the frontend design and code
 - [ ] Polish language option
 - [ ] README files for server and client
+- [ ] Major overhaul of Jest tests
 
 #### Contributing
 

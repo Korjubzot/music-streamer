@@ -5,7 +5,7 @@ function Header() {
   return (
     <header
       data-testid="header"
-      className="bg-blue-500 text-white p-4 shadow-md"
+      className="bg-blue-500 text-white p-4 shadow-md w-full"
     >
       <nav className="container mx-auto flex justify-between items-center">
         <h1 className="font-bold text-xl">Music Library&nbsp;</h1>

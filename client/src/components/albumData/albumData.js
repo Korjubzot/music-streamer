@@ -31,7 +31,7 @@ function AlbumData() {
     return <div className="text-blue-500 font-bold text-xl">Loading...</div>;
   } else {
     return (
-      <div className="flex justify-center items-center bg-gray-100 max-h-screen">
+      <div className="flex justify-center items-center bg-gray-100">
         <div className="flex flex-col mr-4">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="my-2 bg-white p-6 rounded-lg shadow-md">
