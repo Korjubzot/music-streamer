@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Player from "../player/player";
 
-import img from "../../temp/img/plasticBeach.jpg";
+import img from "../../temp/img/demondays.jpg";
 import axios from "axios";
 
 function AlbumData() {
@@ -31,6 +31,10 @@ function AlbumData() {
     return <div className="text-blue-500 font-bold text-xl">Loading...</div>;
   } else {
     return (
+      // TODO - clean all this up and merge player.js and albumData.js into a single component
+      // The layout of this is completely bizarre and I don't know why I did it this way
+      // CSS is tangled and spread in a strange way, and both player and albumData should probably just be one component
+      // At least for now.
       <div className="flex justify-center items-center bg-gray-100">
         <div className="flex flex-col mr-4">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -27,7 +27,7 @@ function LibraryData() {
   }
 
   return (
-    <div className="flex flex-col bg-gray-200">
+    <div className="flex flex-col h-screen p-4">
       <table className="table-auto bg-white rounded-lg shadow-md overflow-hidden">
         <thead className="bg-gray-50">
           <tr>
@@ -35,7 +35,6 @@ function LibraryData() {
             <th className="px-4 py-2">Album</th>
             <th className="px-4 py-2">Genre</th>
             <th className="px-4 py-2">Year</th>
-            {/* what on earth was i thinking with this css */}
           </tr>
         </thead>
         <tbody className="bg-white">
