@@ -14,7 +14,7 @@ I've built this as a full-stack project both for my portfolio, but also as an at
 
 ### Installation
 
-See the client and server README files for instructions on setting up each of those. Both a client and server are required to use this project at full functionality.
+See the client and server README files for instructions on setting up each of those. Both a client and server, as well as a Docker image, are required to use this project at full functionality.
 
 ### Tests
 
